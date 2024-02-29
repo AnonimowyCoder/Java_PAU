@@ -1,12 +1,4 @@
-interface Printable{
-    void print();
-}
-abstract class Figure implements Printable{
-    abstract double calculateArea();
-    abstract double calculatePerimeter();
-}
-
-class Triangle extends Figure{
+public class Triangle extends Figure{
     private double side_a;
     private double side_b;
     private double side_c;
@@ -35,6 +27,11 @@ class Triangle extends Figure{
 
     @Override
     public void print() {
-
+        System.out.println("Boki trojkata maja dlugosci:");
+        System.out.println("a = " + side_a);
+        System.out.println("b = " + side_b);
+        System.out.println("c = " + side_c);
+        System.out.println("Pole wynosi: " + calculateArea());
+        System.out.println("Obwod wynosi: " + calculatePerimeter());
     }
 }
